@@ -5,6 +5,9 @@ import './ProjectContainer.css'
 
 const ProjectContainer = ({ project }) => (
   <div className='project'>
+    
+    {project.livePreview !== undefined ? <a href={project.livePreview} target="_blank" rel="noreferrer" aria-label="source code link"><img className='project__img' src={project.img} alt="" /></a> : <img className='project__img' src={project.img} alt="" />}
+    
     <h3>{project.name}</h3>
 
     <p className='project__description'>{project.description}</p>
@@ -23,6 +26,7 @@ const ProjectContainer = ({ project }) => (
         href={project.sourceCode}
         aria-label='source code'
         className='link link--icon'
+        target="_blank" rel="noreferrer"
       >
         <GitHubIcon />
       </a>
@@ -33,6 +37,7 @@ const ProjectContainer = ({ project }) => (
         href={project.livePreview}
         aria-label='live preview'
         className='link link--icon'
+        target="_blank" rel="noreferrer"
       >
         <LaunchIcon />
       </a>

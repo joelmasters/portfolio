@@ -1,0 +1,25 @@
+.about_me {
+  padding: 3em 2em;
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  max-width: 800px;
+}
+.about_me > h2 {
+  text-align: center;
+}
+
+.about_me__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-fg);
+}
+
+@media (max-width: 600px) {
+  .about_me {
+    padding: 2em;
+    margin-top: 3em;
+    text-align: left;
+  }
+}
